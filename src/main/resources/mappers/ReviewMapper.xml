@@ -44,7 +44,8 @@
 	</insert>
 
 	<insert id="insertReviewAsField" parameterType="map">
-		INSERT INTO `review`
+		INSERT INTO
+		`review`
 		(
 		`storeName`
 		,`menu`
@@ -61,9 +62,28 @@
 		, #{userName}
 		,
 		#{point}
-		, #{review}
+		,
+		#{review}
 		, NOW()
 		, NOW()
 		)
 	</insert>
+
+	<update id="updateReviewById" parameterType="map">
+		update
+		`review`
+		set
+		`review` = #{review}
+		, `updatedAt` = NOW()
+		where
+		`id`=#{id}
+	</update>
+
+	<delete id="deleteReviewById" parameterType="int">
+		delete
+		from
+		`review`
+		where
+		`id`=#{id}
+	</delete>
 </mapper>
