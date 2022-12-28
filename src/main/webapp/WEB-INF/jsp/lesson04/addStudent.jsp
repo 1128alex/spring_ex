@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>${title}</title>
+<title>학생 정보 추가</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
 	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 	crossorigin="anonymous"></script>
@@ -26,38 +26,29 @@
 </head>
 <body>
 	<div class="container">
-		<h1>${title}</h1>
-		<table class="table table-striped">
-			<tr>
-				<th>번호</th>
-				<td>${seller.id}</td>
-			</tr>
-			<tr>
-				<th>이름</th>
-				<td>${seller.name}</td>
-			</tr>
-			<tr>
-				<th>생년월일</th>
-				<td>${seller.yyyymmdd}</td>
-			</tr>
-			<tr>
-				<th>이메일</th>
-				<td>${seller.email}</td>
-			</tr>
-			<tr>
-				<th>자기소개</th>
-				<td>${seller.introduce}</td>
-			</tr>
-			<tr>
-				<th>생성일</th>
-				<td>${seller.createdAt}</td>
-			</tr>
-			<tr>
-				<th>수정일</th>
-				<td>${seller.updatedAt}</td>
-			</tr>
-		</table>
-	</div>
+		<h1>학생 정보 추가</h1>
 
+		<form method="post" action="/lesson04/ex02/add_student">
+			<div class="form-group">
+				<label for="name">이름</label> <input type="text" id="name"
+					name="name" class="form-control col-3" placeholder="이름을 입력하세요">
+			</div>
+			<div class="form-group">
+				<label for="phoneNumber">전화번호</label> <input type="text"
+					id="phoneNumber" name="phoneNumber" class="form-control col-3"
+					placeholder="예) 010-0000-0000">
+			</div>
+			<div class="form-group">
+				<label for="email">이메일</label> <input type="text" id="email"
+					name="email" class="form-control col-3" placeholder="이메일을 입력하세요">
+			</div>
+			<div class="form-group">
+				<label for="dreamJob">장래희망</label> <input id="dreamJob"
+					name="dreamJob" class="form-control col-3"
+					placeholder="장래희망을 입력하세요">
+			</div>
+			<button type="submit" class="btn btn-info">추가</button>
+		</form>
+	</div>
 </body>
 </html>
