@@ -7,7 +7,9 @@ public class Student {
 	private String name;
 	private String phoneNumber;
 	private String email;
+	private String dreamJob;
 	private Date createdAt;
+	private Date updatedAt;
 
 	public int getId() {
 		return id;
@@ -19,6 +21,14 @@ public class Student {
 
 	public String getName() {
 		return name;
+	}
+
+	public String getDreamJob() {
+		return dreamJob;
+	}
+
+	public void setDreamJob(String dreamJob) {
+		this.dreamJob = dreamJob;
 	}
 
 	public void setName(String name) {
@@ -49,13 +59,12 @@ public class Student {
 		this.createdAt = createdAt;
 	}
 
-	public Date getUpatedAt() {
-		return upatedAt;
+	public Date getUpdatedAt() {
+		return updatedAt;
 	}
 
-	public void setUpatedAt(Date upatedAt) {
-		this.upatedAt = upatedAt;
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
 	}
 
-	private Date upatedAt;
 }
