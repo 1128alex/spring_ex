@@ -63,6 +63,6 @@
 	<h1>String을 Date 객체로 변환 => fmt:parseDate</h1>
 	<fmt:parseDate value="${pattern2}" pattern="yyyy/MM/dd HH:mm:ss"
 		var="date2" />
-	<h3>Date 객체: ${date2 }</h3>
+	<h3>Date 객체: ${date2}</h3>
 </body>
 </html>
