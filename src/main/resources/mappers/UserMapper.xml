@@ -39,4 +39,14 @@
 		`id` DESC
 		LIMIT 1
 	</select>
+
+	<select id="existUserByName" parameterType="String"
+		resultType="boolean">
+		SELECT
+		count(1)
+		FROM
+		`new_user`
+		WHERE
+		`name`=#{name};
+	</select>
 </mapper>
